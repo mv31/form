@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./App.css";
-import bootstrap from "bootstrap";
 
 function App() {
   const [value, setvalue] = useState({
@@ -120,6 +119,7 @@ function App() {
       <div class="toast-container position-fixed top-0 end-0 p-3">
         <div
           id="liveToast"
+          // eslint-disable-next-line no-useless-concat
           class={open ? "toast fade show " + "toast" : "toast fade hide"}
           role="alert"
           aria-live="assertive"
