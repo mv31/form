@@ -1,0 +1,31 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+  background-color: #c0d0e0;
+}
+
+.card {
+  margin: 2rem;
+  background-color: #E7EBEF;
+}
+.card-title{
+  font-size: 20px;
+  margin: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+span {
+  font-size: 12px;
+  padding: 3px;
+  color: red;
+  display: none;
+}
+
+input:invalid~span {
+  display: block;
+}
+.toast{
+  background-color: #E7EBEF;
+}
