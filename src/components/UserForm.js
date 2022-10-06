@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Image } from "react-bootstrap";
 import {
   validateEmail,
   validatePhoneNumber,
@@ -21,8 +20,6 @@ const UserForm = () => {
   };
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
-  const [nameError, setNameError] = useState("");
-
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
   const [country, setCountry] = useState("");
@@ -32,7 +29,10 @@ const UserForm = () => {
   const [error, setError] = useState(errorInit);
 
   var toSubmit = false;
+  useEffect(() => {
+    console.log(error);
 
+}, [error])
   const handleClose = () => setShow(false);
 
   const onHandleChange = (e) => {
@@ -83,7 +83,6 @@ const UserForm = () => {
     var error = errorInit;
     if (!name) {
       error.name = "Name is Mandatory";
-      setNameError("Name is Mandatory");
       toSubmit = false;
     }
 
